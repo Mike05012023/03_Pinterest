@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO PINTERES</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <img class="grid-item" src="./IMG/01.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/02.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/03.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/04.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/05.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/06.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/07.jpg" width="230" height="220" />
+        <img class="grid-item" src="./IMG/08.jpg" width="230" height="220" />
+    </div>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+     <script>
+      
+        var elem = document.querySelector('.grid-container');
+        imagesLoaded( elem, ()=>{
+            var msnry = new Masonry(elem, {
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 230,
+            gutter: 20,
+            IsFiWidth: true
+        } );
+        
+        });  
+    </script>
+</body>
+
+</html>
